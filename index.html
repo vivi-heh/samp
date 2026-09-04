@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>{{ teacher }}'s Memory Space</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body style="--accent: {{ data.color }};">
+    <main class="desk">
+        <div class="tape tape-one"></div>
+        <div class="tape tape-two"></div>
+        <nav><span class="lock">🔒 private memory space</span><button id="logout">lock my space ↗</button></nav>
+        <header>
+            <p class="eyebrow">HAPPY TEACHER'S DAY</p>
+            <h1>Dear, <em>{{ teacher }}</em></h1>
+            <p class="subtitle">A little scrapbook made with a lot of gratitude — just for you.</p>
+            <div class="memory-stamp" id="stamp">✦ 0 memories opened</div>
+        </header>
+        <section class="gift-grid">
+            <article class="gift-card hero-card">
+                <div class="sticker">{{ data.emoji }}</div>
+                <p class="card-kicker">YOUR SPECIAL GIFT</p>
+                <h2>{{ data.gift }}</h2>
+                <p>{{ data.line }}</p><span class="ribbon">made for {{ data.subject }}</span>
+            </article>
+            <article class="gift-card game-card">
+                <p class="card-kicker">TINY BRAIN BREAK</p>
+                <h2>Catch the stars!</h2>
+                <p>Tap as many sparkles as you can in 12 seconds.</p>
+                <div class="game-line"><strong id="score">0</strong><span id="timer">12s</span><button id="play">play
+                        ✦</button></div><button id="star" aria-label="Catch a star" hidden>✦</button>
+            </article>
+        </section>
+        <section class="reveal" id="reveal" aria-live="polite">
+            <div class="pin">♥</div>
+            <div class="scribble">a note from your students!</div>
+            <p class="card-kicker">YOUR PRIVATE MESSAGE DECK</p>
+            <div class="quote-mark">“</div>
+            <p class="note-text" id="noteText">A small surprise is waiting for you.</p>
+            <p class="signature" id="signature">— with appreciation</p>
+            <div class="card-foot"><span id="counter">Your deck is ready</span><button class="again" id="again"
+                    hidden>shuffle anew ↻</button></div>
+        </section><button class="spin" id="spin"><span class="spark">✦</span> Open a student message <span
+                class="spark">✦</span></button>
+        <p class="hint">Only your key can open this scrapbook.</p>
+        <div id="confetti" aria-hidden="true"></div>
+    </main>
+    <script src="/static/app.js"></script>
+</body>
+
+</html>

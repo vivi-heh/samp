@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Teacher's Day Memory Spaces</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <main class="desk gate">
+        <div class="tape tape-one"></div>
+        <div class="tape tape-two"></div>
+        <section class="lockbook"><span class="big-lock">🔐</span>
+            <p class="eyebrow">TEACHER'S DAY · PRIVATE EDITION</p>
+            <h1>A scrapbook,<br><em>just for you.</em></h1>
+            <p class="subtitle">Enter your unique four-digit key to open your personal cards, student notes, and a tiny
+                game.</p>
+            <form id="loginForm"><label for="pin">Your security key</label><input id="pin" inputmode="numeric"
+                    autocomplete="one-time-code" maxlength="4" pattern="[0-9]{4}" placeholder="• • • •" required><button
+                    class="spin" type="submit">Unlock my space ✦</button>
+                <p class="form-note" id="formNote">Ask the organiser for your key.</p>
+            </form>
+        </section>
+    </main>
+    <script src="/static/login.js"></script>
+</body>
+
+</html>

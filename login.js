@@ -1,0 +1,2 @@
+const form = document.querySelector('#loginForm'), pin = document.querySelector('#pin'), note = document.querySelector('#formNote');
+form.onsubmit = async e => { e.preventDefault(); const res = await fetch('/api/login', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({pin:pin.value})}), data = await res.json(); if (data.ok) location.reload(); else { note.textContent = data.error; note.classList.add('error'); pin.value = ''; pin.focus(); } };
